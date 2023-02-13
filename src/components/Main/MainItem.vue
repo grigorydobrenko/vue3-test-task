@@ -1,7 +1,7 @@
 <template>
   <div class="item-container">
     <div class="item-header">
-      <input type="checkbox">
+      <ui-checkbox :checked="item.checked" @update:model-value="toggleCheckbox" />
       <div class="item-title">{{item.title}}</div>
       <ui-button class="item-button">Перейти</ui-button>
     </div>
@@ -11,14 +11,21 @@
 
 <script>
 import UiButton from "@/components/UI/UiButton";
+import UiCheckbox from "@/components/UI/UiCheckbox";
+import {mapMutations} from "vuex";
 export default {
   name: "MainItem",
-  components: {UiButton},
+  components: {UiCheckbox, UiButton},
   props: {
     item: {
       type: Object,
       required: true,
     }
+  },
+  methods: {
+    ...mapMutations({
+      toggleCheckbox: 'toggleCheckbox',
+    }),
   }
 }
 </script>

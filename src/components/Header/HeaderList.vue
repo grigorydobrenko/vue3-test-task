@@ -22,5 +22,6 @@ export default {
 <style scoped>
 .item-container {
   display: flex;
+  flex-wrap: wrap;
 }
 </style>

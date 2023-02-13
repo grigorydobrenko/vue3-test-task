@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import {mapState} from "vuex";
+import {mapMutations, mapState} from "vuex";
 import MainItem from "@/components/Main/MainItem";
 
 export default {
@@ -15,7 +15,8 @@ export default {
     ...mapState({
       items: state => state.layout.mainItems
     })
-  }
+  },
+
 }
 </script>
 
