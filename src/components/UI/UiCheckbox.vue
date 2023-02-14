@@ -22,7 +22,7 @@
         class="label"
         :for="id"
     >
-      <slot />
+      <slot/>
     </label>
   </div>
 </template>
@@ -31,38 +31,24 @@
 export default {
   name: "UiCheckbox",
   props: {
-    // /**
-    //  * A DOMString representing the id of the checkbox
-    //  */
-    // id: {
-    //   type: String,
-    //   default: '',
-    // },
-    /**
-     * Control whether the checkbox should be checked from outside of the component.
-     */
     checked: {
       type: Boolean,
       default: true,
     },
   },
   methods: {
-    onInput(event) {
-      /**
-       * v-model implementation
-       * @type {boolean}
-       */
-      this.$emit('update:modelValue', event.target.value);
+    onInput() {
+      this.$emit('update:modelValue');
     },
   }
-  
+
 }
 </script>
 
 <style scoped>
+
 .checkbox {
   display: flex;
-  whitespace: no-wrap;
 }
 
 .checkbox-custom-input-wrapper {

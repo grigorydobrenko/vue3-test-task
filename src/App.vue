@@ -1,7 +1,8 @@
 <template>
   <div class="app">
     <nav class="container">
-      <router-link to="/table">Таблица</router-link> |
+      <router-link to="/table">Таблица</router-link>
+      |
       <router-link to="/layout">Вёрстка</router-link>
     </nav>
     <router-view/>
@@ -33,6 +34,10 @@ nav {
 nav a {
   font-weight: bold;
   color: #2c3e50;
+}
+
+.router-link-active {
+  color: green;
 }
 
 </style>

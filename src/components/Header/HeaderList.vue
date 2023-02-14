@@ -20,6 +20,7 @@ export default {
 </script>
 
 <style scoped>
+
 .item-container {
   display: flex;
   flex-wrap: wrap;

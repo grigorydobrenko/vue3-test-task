@@ -10,24 +10,12 @@ export const layoutModule = {
                 id: 1,
                 title: 'Заполните информацию о компании',
                 description: 'Это создат болле привлекательный образ компании и позволит вашим сотрудникам убедиться что все идет как нужно.',
-                checked: false
             },
             {
                 id: 2,
                 title: 'Создайте сотрудника',
                 description: 'Это создат болле привлекательный образ компании и позволит вашим сотрудникам убедиться что все идет как нужно.',
-                checked: true
             },
         ]
-    }),
-    getters: {
-
-    },
-    mutations: {
-        toggleCheckbox(state, id) {
-            state.forEach(post => post.id === id ? {...post, checked: !post.checked}: post)
-        },
-
-    }
-
+    })
 }

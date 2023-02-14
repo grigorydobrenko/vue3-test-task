@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import {mapMutations, mapState} from "vuex";
+import {mapState} from "vuex";
 import MainItem from "@/components/Main/MainItem";
 
 export default {
@@ -20,6 +20,3 @@ export default {
 }
 </script>
 
-<style scoped>
-
-</style>

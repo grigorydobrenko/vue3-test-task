@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
 import {layoutModule} from "@/store/layoutModule";
+import {tableModule} from "@/store/tableModule";
 
 export default createStore({
   state: {
@@ -11,6 +12,7 @@ export default createStore({
   actions: {
   },
   modules: {
-    layout: layoutModule
+    layout: layoutModule,
+    table: tableModule
   }
 })

@@ -1,31 +1,33 @@
 <template>
   <div class="item-container">
     <div class="item-header">
-      <ui-checkbox :checked="item.checked" @update:model-value="toggleCheckbox" />
-      <div class="item-title">{{item.title}}</div>
+      <ui-checkbox :checked="this.checked" @update:model-value="toggleCheckBox"/>
+      <div class="item-title">{{ item.title }}</div>
       <ui-button class="item-button">Перейти</ui-button>
     </div>
-    <div class="item-description">{{item.description}}</div>
+    <div class="item-description">{{ item.description }}</div>
   </div>
 </template>
 
 <script>
-import UiButton from "@/components/UI/UiButton";
-import UiCheckbox from "@/components/UI/UiCheckbox";
-import {mapMutations} from "vuex";
+
 export default {
   name: "MainItem",
-  components: {UiCheckbox, UiButton},
   props: {
     item: {
       type: Object,
       required: true,
     }
   },
+  data() {
+    return {
+      checked: false
+    }
+  },
   methods: {
-    ...mapMutations({
-      toggleCheckbox: 'toggleCheckbox',
-    }),
+    toggleCheckBox() {
+      this.checked = !this.checked
+    }
   }
 }
 </script>
